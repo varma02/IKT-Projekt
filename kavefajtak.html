@@ -8,11 +8,15 @@
       <title>Lucky - A mi kis kávézónk</title>
     </head>
     
+    <!-- Style -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
       body{
         overflow-x: hidden;
         background: #1f5b2577;
+        width: 100vw;
+        height: 100vh;
       }
       #menu-icon {
         fill: white;
@@ -55,6 +59,11 @@
         float: left;
         padding-right: 2%;
       }
+      footer{
+        background-color: #1f5b25;
+        height: 20%;
+        width: 100%;
+      }
     </style>
     
     <body>
@@ -95,17 +104,17 @@
         </div>
       </nav>
       
-      <!-- Header -->
+      <!-- Header image + text -->
       <header>
         <div class="hd-image"></div>
         <h1 class="hd-text" style="font-family:'Fredericka the Great', cursive;">Kávéfajták</h1>
       </header>
 
-      <!-- Cards -->
+      <!-- Coffee cards -->
       <div class="container">
         <div class="row">
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#espressoModal">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="espresso">
               <img src="./images/kavefajtak/espresso.jpg" class="card-img-top" alt="Espresso image">
               <div class="card-body">
                 <h4 class="card-title">Espresso</h4>
@@ -113,16 +122,16 @@
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#cappuccinoModal">
-              <img src="./images/kavefajtak/cappuccino.jpg" class="card-img-top" alt="Espresso image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="cappuccino">
+              <img src="./images/kavefajtak/cappuccino.jpg" class="card-img-top" alt="Cappuccino image">
               <div class="card-body">
                 <h4 class="card-title">Cappuccino</h4>
               </div>
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#blackModal">
-              <img src="./images/kavefajtak/black.jpg" class="card-img-top" alt="Espresso image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="black">
+              <img src="./images/kavefajtak/black.jpg" class="card-img-top" alt="Black coffee image">
               <div class="card-body">
                 <h4 class="card-title">Black</h4>
               </div>
@@ -131,24 +140,24 @@
         </div>
         <div class="row">
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#irishModal">
-              <img src="./images/kavefajtak/irish.jpg" class="card-img-top" alt="Espresso image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="irish">
+              <img src="./images/kavefajtak/irish.jpg" class="card-img-top" alt="Irish coffee image">
               <div class="card-body">
                 <h4 class="card-title">Irish</h4>
               </div>
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#latteModal">
-              <img src="./images/kavefajtak/latte.jpg" class="card-img-top" alt="Espresso image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="latte">
+              <img src="./images/kavefajtak/latte.jpg" class="card-img-top" alt="Latte image">
               <div class="card-body">
                 <h4 class="card-title">Latte</h4>
               </div>
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#americanoModal">
-              <img src="./images/kavefajtak/americano.jpg" class="card-img-top" alt="Espresso image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="americano">
+              <img src="./images/kavefajtak/americano.jpg" class="card-img-top" alt="Americano image">
               <div class="card-body">
                 <h4 class="card-title">Americano</h4>
               </div>
@@ -157,81 +166,16 @@
         </div>
       </div>
 
-      <!-- Modals -->
-      <div class="modal fade" id="espressoModal" tabindex="-1" aria-labelledby="espressoModalLabel" aria-hidden="true">
+      <!-- Modal -->
+      <div class="modal fade" id="coffeeModal" tabindex="-1" aria-labelledby="coffeeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="espressoModalLabel">Espresso</h5>
+              <h5 class="modal-title" id="coffeeModalLabel"></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <p><img src="./images/kavefajtak/espresso.jpg" alt="espresso"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="cappuccinoModal" tabindex="-1" aria-labelledby="cappuccinoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="cappuccinoModalLabel">Cappuccino</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p><img src="./images/kavefajtak/cappuccino.jpg" alt="cappuccino"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="blackModal" tabindex="-1" aria-labelledby="blackModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="blackModalLabel">Black</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p><img src="./images/kavefajtak/black.jpg" alt="black"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="irishModal" tabindex="-1" aria-labelledby="irishModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="irishModalLabel">Irish</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p><img src="./images/kavefajtak/irish.jpg" alt="irish"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="latteModal" tabindex="-1" aria-labelledby="latteModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="latteModalLabel">Latte</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p><img src="./images/kavefajtak/latte.jpg" alt="latte"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="americanoModal" tabindex="-1" aria-labelledby="americanoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="americanoModalLabel">Americano</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p><img src="./images/kavefajtak/americano.jpg" alt="americano"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
+              <p><img src="none" alt="none"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
             </div>
           </div>
         </div>
@@ -242,6 +186,19 @@
 
       </footer>
 
+      <!-- Modal data changer script -->
+      <script>
+        var coffeeModal = document.getElementById('coffeeModal')
+        coffeeModal.addEventListener('show.bs.modal', function (event) {
+          var button = event.relatedTarget
+          var coffee_type = button.getAttribute('data-bs-coffee-type')
+          var modalTitle = coffeeModal.querySelector('.modal-title')
+          var modalImage = coffeeModal.querySelector('.modal-body img')
+          modalTitle.textContent = coffee_type.charAt(0).toUpperCase() + coffee_type.slice(1);
+          modalImage.src = './images/kavefajtak/' + coffee_type + '.jpg'
+        })
+      </script>
+      <!-- Bootstrap + Popper bundle js-->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     </body>
 </html>
