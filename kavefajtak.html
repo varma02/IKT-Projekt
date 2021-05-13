@@ -50,6 +50,11 @@
         height: calc(100% + 2px);
         transform: translate(-1px, -1px);
       }
+      .modal-body img{
+        width: 45%;
+        float: left;
+        padding-right: 2%;
+      }
     </style>
     
     <body>
@@ -100,7 +105,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md py-2">
-            <button class="card">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#espressoModal">
               <img src="./images/kavefajtak/espresso.jpg" class="card-img-top" alt="Espresso image">
               <div class="card-body">
                 <h4 class="card-title">Espresso</h4>
@@ -108,7 +113,7 @@
             </button>
           </div>
           <div class="col-md py-2">
-            <button class="card">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#cappuccinoModal">
               <img src="./images/kavefajtak/cappuccino.jpg" class="card-img-top" alt="Espresso image">
               <div class="card-body">
                 <h4 class="card-title">Cappuccino</h4>
@@ -116,7 +121,7 @@
             </button>
           </div>
           <div class="col-md py-2">
-            <button class="card">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#blackModal">
               <img src="./images/kavefajtak/black.jpg" class="card-img-top" alt="Espresso image">
               <div class="card-body">
                 <h4 class="card-title">Black</h4>
@@ -126,7 +131,7 @@
         </div>
         <div class="row">
           <div class="col-md py-2">
-            <button class="card">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#irishModal">
               <img src="./images/kavefajtak/irish.jpg" class="card-img-top" alt="Espresso image">
               <div class="card-body">
                 <h4 class="card-title">Irish</h4>
@@ -134,7 +139,7 @@
             </button>
           </div>
           <div class="col-md py-2">
-            <button class="card">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#latteModal">
               <img src="./images/kavefajtak/latte.jpg" class="card-img-top" alt="Espresso image">
               <div class="card-body">
                 <h4 class="card-title">Latte</h4>
@@ -142,7 +147,7 @@
             </button>
           </div>
           <div class="col-md py-2">
-            <button class="card">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#americanoModal">
               <img src="./images/kavefajtak/americano.jpg" class="card-img-top" alt="Espresso image">
               <div class="card-body">
                 <h4 class="card-title">Americano</h4>
@@ -153,7 +158,84 @@
       </div>
 
       <!-- Modals -->
-      
+      <div class="modal fade" id="espressoModal" tabindex="-1" aria-labelledby="espressoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="espressoModalLabel">Espresso</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><img src="./images/kavefajtak/espresso.jpg" alt="espresso"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="cappuccinoModal" tabindex="-1" aria-labelledby="cappuccinoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cappuccinoModalLabel">Cappuccino</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><img src="./images/kavefajtak/cappuccino.jpg" alt="cappuccino"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="blackModal" tabindex="-1" aria-labelledby="blackModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="blackModalLabel">Black</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><img src="./images/kavefajtak/black.jpg" alt="black"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="irishModal" tabindex="-1" aria-labelledby="irishModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="irishModalLabel">Irish</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><img src="./images/kavefajtak/irish.jpg" alt="irish"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="latteModal" tabindex="-1" aria-labelledby="latteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="latteModalLabel">Latte</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><img src="./images/kavefajtak/latte.jpg" alt="latte"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="americanoModal" tabindex="-1" aria-labelledby="americanoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="americanoModalLabel">Americano</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p><img src="./images/kavefajtak/americano.jpg" alt="americano"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Footer -->
       <footer>
