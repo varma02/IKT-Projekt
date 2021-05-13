@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+      <link rel="icon" href="./images/general/menu-icon.svg" type="image/svg" sizes="16x16"> 
+      <title>Lucky - A mi kis kávézónk</title>
+    </head>
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+      body{
+        overflow:hidden;
+      }
+      #menu-icon {
+        fill: white;
+      }
+      .navbar {
+        background-color: #1f5b25;
+      }
+      .carousel-item{
+        background-size: cover !important;
+        height: calc(100vh - 57px);
+      }
+      .carousel-item:nth-child(1){
+        background: url("./images/index/background-1.jpg") center center;
+      }
+      .carousel-item:nth-child(2){
+        background: url("./images/index/background-2.jpg") center center;
+      }
+      .carousel-item:nth-child(3){
+        background: url("./images/index/background-3.jpg") center center;
+      }
+      .cont{
+        transform: translateY(-60vh);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 69;
+      }
+      .cont .col-md-8{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: whitesmoke;
+        background-color: rgba(0,0,0,.75);
+      }
+    </style>
+    
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <svg id="menu-icon" enable-background="new 0 0 512 512" height="25" viewBox="0 0 512 512" width="25" xmlns="http://www.w3.org/2000/svg"><g><path d="m439.385 124.4c-21.855 0-48.387 9.211-79.217 27.432 18.221-30.83 27.432-57.361 27.432-79.217 0-38.658-26.051-72.615-71.6-72.615-19.719 0-41.969 10.958-60 28.87-18.031-17.912-40.281-28.87-60-28.87-45.007 0-71.6 33.492-71.6 72.615 0 21.856 9.211 48.387 27.432 79.217-30.83-18.221-57.362-27.432-79.217-27.432-38.657 0-72.615 26.051-72.615 71.6 0 19.718 10.958 41.969 28.87 60-17.912 18.031-28.87 40.282-28.87 60 0 45.007 33.492 71.6 72.615 71.6 21.855 0 48.387-9.211 79.217-27.432-18.221 30.83-27.432 57.361-27.432 79.217 0 38.658 26.051 72.615 71.6 72.615 19.718 0 41.969-10.958 60-28.87 18.031 17.912 40.282 28.87 60 28.87 45.007 0 71.6-33.492 71.6-72.615 0-21.856-9.211-48.387-27.432-79.217 30.83 18.221 57.362 27.432 79.217 27.432 38.657 0 72.615-26.051 72.615-71.6 0-19.718-10.958-41.969-28.87-60 17.912-18.031 28.87-40.282 28.87-60 0-45.007-33.492-71.6-72.615-71.6zm-243.385-94.4c14.547 0 34.724 12.897 47.976 30.666 5.991 8.033 18.052 8.041 24.049 0 13.251-17.769 33.428-30.666 47.975-30.666 40.433 0 41.6 38.253 41.6 42.615 0 47.172-60.048 119.843-101.6 160.981-38.215-37.836-101.6-112.739-101.6-160.981 0-4.362 1.167-42.615 41.6-42.615zm-166 286c0-14.547 12.896-34.724 30.666-47.976 8.032-5.991 8.041-18.051 0-24.048-17.77-13.252-30.666-33.429-30.666-47.976 0-40.433 38.253-41.6 42.615-41.6 48.773 0 123.237 63.485 160.981 101.6-42.052 42.467-114.854 101.6-160.981 101.6-4.362 0-42.615-1.167-42.615-41.6zm286 166c-14.547 0-34.724-12.897-47.976-30.666-5.993-8.033-18.05-8.041-24.049 0-13.251 17.769-33.428 30.666-47.975 30.666-40.433 0-41.6-38.253-41.6-42.615 0-48.87 63.709-123.467 101.6-160.981 46.073 45.615 101.6 116.477 101.6 160.981 0 4.362-1.167 42.615-41.6 42.615zm135.334-213.976c17.77 13.252 30.666 33.429 30.666 47.976 0 40.433-38.253 41.6-42.615 41.6-47.171 0-119.839-60.053-160.981-101.6 37.839-38.212 112.422-101.6 160.981-101.6 4.362 0 42.615 1.167 42.615 41.6 0 14.547-12.896 34.724-30.666 47.976-8.032 5.991-8.041 18.051 0 24.048z"/></g></svg>
+            Szerencsejáték Zrt.
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="kavefajtak.html">Kávéfajták</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="sutemenyek.html">Sütemények</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="blog.html">Blog</a>
+              </li>
+            </ul>
+            <div class="dropdown">
+              <a class="btn btn-outline-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Fiók
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Bejelentkezés</a></li>
+                <li><a class="dropdown-item" href="#">Regisztráció</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item disabled" href="#">Saját fiók</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active"></div>
+          <div class="carousel-item"></div>
+          <div class="carousel-item"></div>
+        </div>
+      </div>
+      <div class="cont">
+        <div class="col-md-8 col-lg-6 py-5 px-3">
+          <h1 style="font-family:'Fredericka the Great', cursive;">Lucky - A mi kis kávézónk </h1>
+          <h4>Sok szeretettel köszöntünk a honlapon! <br>
+              Ismerkedj meg kávé és sütemény kínálatunkkal.</h4>
+        </div>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    </body>
+</html>
