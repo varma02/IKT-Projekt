@@ -4,29 +4,93 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-      <link rel="icon" href="./images/general/menu-icon.svg" type="image/svg" sizes="16x16"> 
-      <title>Lucky - A mi kis kávézónk</title>
+      <link rel="icon" href="./images/general/icon.svg" type="image/svg" sizes="16x16"> 
+      <title>Lucky - Sütemények</title>
     </head>
     
+    <!-- Style -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
       @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
       body{
-        overflow:hidden;
-      }
-      #menu-icon {
-        fill: white;
+        overflow-x: hidden;
+        background: #96b299;
+        width: 100vw;
+        height: 100vh;
       }
       .navbar {
+        z-index: 69;
         background-color: #1f5b25;
+        position: fixed;
+        width: 100%;
+      }
+      .dropdown-menu{
+        background: #96b299;
+      }
+      .container{
+        padding: 1vh;
+      }
+      .hd-image{
+        background: url("./images/kavefajtak/header.jpg") center center;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        height: calc(20vh + 40px);
+        width: 102vw;
+        transform: translateX(-1vh);
+      }
+      .hd-text{
+        transform: translateY(-12vh);
+        text-align: center;
+      }
+      .card{
+        padding: 0;
+        transition: 0.1s;
+      }
+      .card:hover{
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+      }
+      .card-img-top{
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        transform: translate(-1px, -1px);
+      }
+      .modal-body img{
+        width: 45%;
+        float: left;
+        padding-right: 2%;
+      }
+      footer{
+        background-color: #1f5b25;
+        height: 20%;
+        width: 100%;
+        color: whitesmoke;
+      }
+      footer .container, .row, .col{
+        height: 100%;
+      }
+      footer .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      footer ul{
+        list-style: none;
+        font-size: 130%;
+      }
+      footer .bi{
+        padding-right: 0.5%;
+      }
+      footer .input-group{
+        width: 70%;
       }
     </style>
     
     <body>
+      <!-- Menu/navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
-            <svg id="menu-icon" enable-background="new 0 0 512 512" height="25" viewBox="0 0 512 512" width="25" xmlns="http://www.w3.org/2000/svg"><g><path d="m439.385 124.4c-21.855 0-48.387 9.211-79.217 27.432 18.221-30.83 27.432-57.361 27.432-79.217 0-38.658-26.051-72.615-71.6-72.615-19.719 0-41.969 10.958-60 28.87-18.031-17.912-40.281-28.87-60-28.87-45.007 0-71.6 33.492-71.6 72.615 0 21.856 9.211 48.387 27.432 79.217-30.83-18.221-57.362-27.432-79.217-27.432-38.657 0-72.615 26.051-72.615 71.6 0 19.718 10.958 41.969 28.87 60-17.912 18.031-28.87 40.282-28.87 60 0 45.007 33.492 71.6 72.615 71.6 21.855 0 48.387-9.211 79.217-27.432-18.221 30.83-27.432 57.361-27.432 79.217 0 38.658 26.051 72.615 71.6 72.615 19.718 0 41.969-10.958 60-28.87 18.031 17.912 40.282 28.87 60 28.87 45.007 0 71.6-33.492 71.6-72.615 0-21.856-9.211-48.387-27.432-79.217 30.83 18.221 57.362 27.432 79.217 27.432 38.657 0 72.615-26.051 72.615-71.6 0-19.718-10.958-41.969-28.87-60 17.912-18.031 28.87-40.282 28.87-60 0-45.007-33.492-71.6-72.615-71.6zm-243.385-94.4c14.547 0 34.724 12.897 47.976 30.666 5.991 8.033 18.052 8.041 24.049 0 13.251-17.769 33.428-30.666 47.975-30.666 40.433 0 41.6 38.253 41.6 42.615 0 47.172-60.048 119.843-101.6 160.981-38.215-37.836-101.6-112.739-101.6-160.981 0-4.362 1.167-42.615 41.6-42.615zm-166 286c0-14.547 12.896-34.724 30.666-47.976 8.032-5.991 8.041-18.051 0-24.048-17.77-13.252-30.666-33.429-30.666-47.976 0-40.433 38.253-41.6 42.615-41.6 48.773 0 123.237 63.485 160.981 101.6-42.052 42.467-114.854 101.6-160.981 101.6-4.362 0-42.615-1.167-42.615-41.6zm286 166c-14.547 0-34.724-12.897-47.976-30.666-5.993-8.033-18.05-8.041-24.049 0-13.251 17.769-33.428 30.666-47.975 30.666-40.433 0-41.6-38.253-41.6-42.615 0-48.87 63.709-123.467 101.6-160.981 46.073 45.615 101.6 116.477 101.6 160.981 0 4.362-1.167 42.615-41.6 42.615zm135.334-213.976c17.77 13.252 30.666 33.429 30.666 47.976 0 40.433-38.253 41.6-42.615 41.6-47.171 0-119.839-60.053-160.981-101.6 37.839-38.212 112.422-101.6 160.981-101.6 4.362 0 42.615 1.167 42.615 41.6 0 14.547-12.896 34.724-30.666 47.976-8.032 5.991-8.041 18.051 0 24.048z"/></g></svg>
+            <img width="25px" height="25px" src="images/general/icon.svg" alt="">
             Szerencsejáték Zrt.
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +109,7 @@
               </li>
             </ul>
             <div class="dropdown">
-              <a class="btn btn-outline-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 Fiók
               </a>
               <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuLink">
@@ -59,6 +123,123 @@
         </div>
       </nav>
       
+      <!-- Header image + text -->
+      <header>
+        <div class="hd-image"></div>
+        <h1 class="hd-text" style="font-family:'Fredericka the Great', cursive;">Kávéfajták</h1>
+      </header>
+
+      <!-- Coffee cards -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md py-2">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="espresso">
+              <img src="./images/kavefajtak/espresso.jpg" class="card-img-top" alt="Espresso image">
+              <div class="card-body">
+                <h4 class="card-title">Espresso</h4>
+              </div>
+            </button>
+          </div>
+          <div class="col-md py-2">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="cappuccino">
+              <img src="./images/kavefajtak/cappuccino.jpg" class="card-img-top" alt="Cappuccino image">
+              <div class="card-body">
+                <h4 class="card-title">Cappuccino</h4>
+              </div>
+            </button>
+          </div>
+          <div class="col-md py-2">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="black">
+              <img src="./images/kavefajtak/black.jpg" class="card-img-top" alt="Black coffee image">
+              <div class="card-body">
+                <h4 class="card-title">Black</h4>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md py-2">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="irish">
+              <img src="./images/kavefajtak/irish.jpg" class="card-img-top" alt="Irish coffee image">
+              <div class="card-body">
+                <h4 class="card-title">Irish</h4>
+              </div>
+            </button>
+          </div>
+          <div class="col-md py-2">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="latte">
+              <img src="./images/kavefajtak/latte.jpg" class="card-img-top" alt="Latte image">
+              <div class="card-body">
+                <h4 class="card-title">Latte</h4>
+              </div>
+            </button>
+          </div>
+          <div class="col-md py-2">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="americano">
+              <img src="./images/kavefajtak/americano.jpg" class="card-img-top" alt="Americano image">
+              <div class="card-body">
+                <h4 class="card-title">Americano</h4>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="coffeeModal" tabindex="-1" aria-labelledby="coffeeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="coffeeModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img src="none" alt="none"> 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea velit a. Ipsa cumque quod alias laudantium illum consequuntur totam obcaecati harum, hic itaque consequatur doloremque in nam ea beatae repudiandae aliquam ipsam rerum fugit? Autem ea nemo a praesentium, eius totam voluptatum. Itaque vel optio, iure obcaecati perspiciatis dolor exercitationem delectus numquam?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer> <div class="container"> <div class="row">
+        <div class="col">
+          <h2>Kapcsolat</h2>
+          <ul>
+            <li><i class="bi bi-envelope"></i> kapcsolat@lucky.hu</li>
+            <li><i class="bi bi-telephone"></i> +36 30 696 9696</li>
+            <li><i class="bi bi-building"></i> Kecskemét, Köptető utca 69</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2>Hírlevél</h2>
+          <ul>
+            <li>Iratkozzon fel heti kávémagazinunkra!</li>
+            <li>
+              <div class="input-group mt-2">
+                <input type="email" class="form-control" placeholder="E-mail cím" aria-label="E-mail cím" aria-describedby="button-addon">
+                <button class="btn btn-success" type="button" id="button-addon">Feliratkozás</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div> </div> </footer>
+
+      <!-- Modal data changer script -->
+      <script>
+        var coffeeModal = document.getElementById('coffeeModal')
+        coffeeModal.addEventListener('show.bs.modal', function (event) {
+          var button = event.relatedTarget
+          var coffee_type = button.getAttribute('data-bs-coffee-type')
+          var modalTitle = coffeeModal.querySelector('.modal-title')
+          var modalImage = coffeeModal.querySelector('.modal-body img')
+          modalTitle.textContent = coffee_type.charAt(0).toUpperCase() + coffee_type.slice(1);
+          modalImage.src = './images/kavefajtak/' + coffee_type + '.jpg'
+        })
+      </script>
+      <!-- Bootstrap + Popper bundle js-->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     </body>
 </html>
