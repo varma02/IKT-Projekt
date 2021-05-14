@@ -38,6 +38,7 @@
       .hd-text{
         transform: translateY(-12vh);
         text-align: center;
+        font-family:'Fredericka the Great', cursive;
       }
       .card{
         padding: 0;
@@ -58,14 +59,14 @@
       }
       footer{
         background-color: #1f5b25;
-        height: 20%;
+        min-height: 20%;
         width: 100%;
         color: whitesmoke;
       }
-      footer .container, .row, .col{
+      footer .container, .row, .col-md{
         height: 100%;
       }
-      footer .col{
+      footer .col-md{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -123,7 +124,7 @@
       <!-- Header image + text -->
       <header>
         <div class="hd-image"></div>
-        <h1 class="hd-text" style="font-family:'Fredericka the Great', cursive;">Kávéfajták</h1>
+        <h1 class="hd-text">Kávéfajták</h1>
       </header>
 
       <!-- Coffee cards -->
@@ -202,7 +203,7 @@
 
       <!-- Footer -->
       <footer> <div class="container"> <div class="row">
-        <div class="col">
+        <div class="col-md">
           <h2>Kapcsolat</h2>
           <ul>
             <li><i class="bi bi-envelope"></i> kapcsolat@lucky.hu</li>
@@ -210,7 +211,7 @@
             <li><i class="bi bi-building"></i> Kecskemét, Köptető utca 69</li>
           </ul>
         </div>
-        <div class="col">
+        <div class="col-md">
           <h2>Hírlevél</h2>
           <ul>
             <li>Iratkozzon fel heti kávémagazinunkra!</li>

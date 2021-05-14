@@ -24,9 +24,6 @@
         position: fixed;
         width: 100%;
       }
-      .dropdown-menu{
-        background: #96b299;
-      }
       .container{
         padding: 1vh;
       }
@@ -47,9 +44,10 @@
       .card{
         padding: 0;
         transition: 0.1s;
+        box-shadow: none !important;
       }
       .card:hover{
-        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2) !important;
       }
       .card-img-top{
         width: calc(100% + 2px);
@@ -63,14 +61,14 @@
       }
       footer{
         background-color: #1f5b25;
-        height: 20%;
+        min-height: 20%;
         width: 100%;
         color: whitesmoke;
       }
-      footer .container, .row, .col{
+      footer .container, .row, .col-md{
         height: 100%;
       }
-      footer .col{
+      footer .col-md{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -131,56 +129,56 @@
         <h1 class="hd-text">Sütemények</h1>
       </header>
 
-      <!-- Coffee cards -->
+      <!-- Dessert cards -->
       <div class="container">
         <div class="row">
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="espresso">
-              <img src="./images/kavefajtak/espresso.jpg" class="card-img-top" alt="Espresso image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#dessertModal" data-bs-title="Brownie" data-bs-image="brownie">
+              <img src="./images/sutemenyek/brownie.jpg" class="card-img-top" alt="Brownie kép">
               <div class="card-body">
-                <h4 class="card-title">Espresso</h4>
+                <h4 class="card-title">Brownie</h4>
               </div>
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="cappuccino">
-              <img src="./images/kavefajtak/cappuccino.jpg" class="card-img-top" alt="Cappuccino image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#dessertModal" data-bs-title="Croissant" data-bs-image="croissant">
+              <img src="./images/sutemenyek/croissant.jpg" class="card-img-top" alt="Croissant kép">
               <div class="card-body">
-                <h4 class="card-title">Cappuccino</h4>
+                <h4 class="card-title">Croissant</h4>
               </div>
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="black">
-              <img src="./images/kavefajtak/black.jpg" class="card-img-top" alt="Black coffee image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#dessertModal" data-bs-title="Kávés süti" data-bs-image="kavessuti">
+              <img src="./images/sutemenyek/kavessuti.jpg" class="card-img-top" alt="Kávés süti kép">
               <div class="card-body">
-                <h4 class="card-title">Black</h4>
+                <h4 class="card-title">Kávés süti</h4>
               </div>
             </button>
           </div>
         </div>
         <div class="row">
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="irish">
-              <img src="./images/kavefajtak/irish.jpg" class="card-img-top" alt="Irish coffee image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#dessertModal" data-bs-title="Tiramisu" data-bs-image="tiramisu">
+              <img src="./images/sutemenyek/tiramisu.jpg" class="card-img-top" alt="Tiramisu kép">
               <div class="card-body">
-                <h4 class="card-title">Irish</h4>
+                <h4 class="card-title">Tiramisu</h4>
               </div>
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="latte">
-              <img src="./images/kavefajtak/latte.jpg" class="card-img-top" alt="Latte image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#dessertModal" data-bs-title="Muffin" data-bs-image="muffin">
+              <img src="./images/sutemenyek/muffin.jpg" class="card-img-top" alt="Muffin kép">
               <div class="card-body">
-                <h4 class="card-title">Latte</h4>
+                <h4 class="card-title">Muffin</h4>
               </div>
             </button>
           </div>
           <div class="col-md py-2">
-            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#coffeeModal" data-bs-coffee-type="americano">
-              <img src="./images/kavefajtak/americano.jpg" class="card-img-top" alt="Americano image">
+            <button type="button" class="card btn" data-bs-toggle="modal" data-bs-target="#dessertModal" data-bs-title="Csoki torta" data-bs-image="csokitorta">
+              <img src="./images/sutemenyek/csokitorta.jpg" class="card-img-top" alt="Csoki torta kép">
               <div class="card-body">
-                <h4 class="card-title">Americano</h4>
+                <h4 class="card-title">Csoki torta</h4>
               </div>
             </button>
           </div>
@@ -188,11 +186,11 @@
       </div>
 
       <!-- Modal -->
-      <div class="modal fade" id="coffeeModal" tabindex="-1" aria-labelledby="coffeeModalLabel" aria-hidden="true">
+      <div class="modal fade" id="dessertModal" tabindex="-1" aria-labelledby="dessertModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="coffeeModalLabel"></h5>
+              <h5 class="modal-title" id="dessertModalLabel"></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -207,7 +205,7 @@
 
       <!-- Footer -->
       <footer> <div class="container"> <div class="row">
-        <div class="col">
+        <div class="col-md">
           <h2>Kapcsolat</h2>
           <ul>
             <li><i class="bi bi-envelope"></i> kapcsolat@lucky.hu</li>
@@ -215,7 +213,7 @@
             <li><i class="bi bi-building"></i> Kecskemét, Köptető utca 69</li>
           </ul>
         </div>
-        <div class="col">
+        <div class="col-md">
           <h2>Hírlevél</h2>
           <ul>
             <li>Iratkozzon fel heti kávémagazinunkra!</li>
@@ -231,14 +229,15 @@
 
       <!-- Modal data changer script -->
       <script>
-        var coffeeModal = document.getElementById('coffeeModal')
-        coffeeModal.addEventListener('show.bs.modal', function (event) {
+        var dessertModal = document.getElementById('dessertModal')
+        dessertModal.addEventListener('show.bs.modal', function (event) {
           var button = event.relatedTarget
-          var coffee_type = button.getAttribute('data-bs-coffee-type')
-          var modalTitle = coffeeModal.querySelector('.modal-title')
-          var modalImage = coffeeModal.querySelector('.modal-body img')
-          modalTitle.textContent = coffee_type.charAt(0).toUpperCase() + coffee_type.slice(1);
-          modalImage.src = './images/kavefajtak/' + coffee_type + '.jpg'
+          var image = button.getAttribute('data-bs-image')
+          var title = button.getAttribute('data-bs-title')
+          var modalTitle = dessertModal.querySelector('.modal-title')
+          var modalImage = dessertModal.querySelector('.modal-body img')
+          modalTitle.textContent = title
+          modalImage.src = './images/sutemenyek/' + image + '.jpg'
         })
       </script>
       <!-- Bootstrap + Popper bundle js-->
