@@ -14,15 +14,35 @@
       @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
       body{
         overflow-x: hidden;
-        background: #96b299;
+        background: #445c4c;
         width: 100vw;
         height: 100vh;
       }
       .navbar {
         z-index: 69;
-        background-color: #1f5b25;
+        background-color: #19491e;
         position: fixed;
         width: 100%;
+      }
+      .btn-success {
+        color: rgb(232, 230, 227);
+        background-color: rgb(20, 108, 67);
+        border-color: rgb(32, 175, 109);
+      }
+      .dropdown-menu {
+        color: rgb(209, 205, 199);
+        list-style-image: none;
+        background-color: rgb(24, 26, 27);
+        border-color: rgba(140, 130, 115, 0.15);
+      }
+      .dropdown-item {
+        color: rgb(209, 205, 199) !important;
+        text-decoration-color: currentcolor;
+        background-color: transparent;
+        border-color: currentcolor;
+      }
+      .dropdown-item:hover{
+        background-color: #232627;
       }
       .container{
         padding: 1vh;
@@ -43,6 +63,8 @@
       .card{
         padding: 0;
         transition: 0.1s;
+        background-color: #181a1b !important;
+        color: rgb(209, 205, 199) !important;
       }
       .card:hover{
         box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -57,11 +79,28 @@
         float: left;
         padding-right: 2%;
       }
+      .modal-header {
+        border-bottom-color: rgb(56, 61, 63);
+      }
+      .modal-content {
+        background-color: rgb(24, 26, 27);
+        border-color: rgba(140, 130, 115, 0.2);
+        outline-color: currentcolor;
+        color: rgb(209, 205, 199) !important;
+      }
       footer{
-        background-color: #1f5b25;
+        background-color: #19491e;
         min-height: 20%;
         width: 100%;
         color: whitesmoke;
+      }
+      .form-control {
+        color: rgb(209, 205, 199) !important;
+        background-color: rgb(24, 26, 27) !important;
+        border-color: rgb(60, 65, 68) !important;
+      }
+      .form-control::placeholder{
+        color: rgb(158, 150, 137) !important;
       }
       footer .container, .row, .col-md{
         height: 100%;
@@ -189,7 +228,9 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="coffeeModalLabel"></h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" style="color:rgb(209, 205, 199);" class="btn" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+              </button>
             </div>
             <div class="modal-body">
               <p>
