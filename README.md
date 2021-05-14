@@ -3,3 +3,10 @@
  - Pixabay: https://pixabay.com/hu/
  - Picsum: https://picsum.photos/
  - Flaticon: https://www.flaticon.com/
+
+## Keretrendszerek
+ - Bootstrap: https://getbootstrap.com/
+ - Bootstrap Icons: https://icons.getbootstrap.com/
+ - Popper (Bootstrap bundle): https://popper.js.org/
+
+A weboldal a https://kepzes2021.github.io/ alapján készült.
